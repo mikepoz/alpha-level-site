@@ -785,13 +785,18 @@
 
   /* THREAT TYPES */
   .threat-tags {
-    display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 14px; margin-top: 32px;
   }
   .threat-tag {
     background: rgba(73,200,245,0.06);
     border: 1px solid rgba(73,200,245,0.18);
-    border-radius: 6px; padding: 8px 16px;
-    font-size: 13px; font-weight: 600; color: var(--cyan);
+    border-radius: 8px; padding: 16px 20px;
+    font-size: 15px; font-weight: 600; color: var(--cyan);
+    text-align: center;
+  }
+  @media (max-width: 768px) {
+    .threat-tags { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (max-width: 768px) {
