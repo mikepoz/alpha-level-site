@@ -5,7 +5,6 @@ AI-Powered Threat Detection marketing site.
 ## Structure
 
 ```
-alphalevel/
 ├── index.html      # Main HTML
 ├── style.css       # All styles
 ├── script.js       # Animated pipeline + interactions
@@ -14,7 +13,7 @@ alphalevel/
 
 ## Local Development
 
-Just open `index.html` in a browser — no build step needed.
+Open `index.html` in a browser — no build step needed.
 
 ## Deployment
 
