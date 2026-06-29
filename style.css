@@ -746,7 +746,11 @@
   }
   .team-name { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
   .team-role { font-size: 12px; color: var(--cyan); font-weight: 600; margin-bottom: 12px; }
-  .team-bio { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+  .team-linkedin {
+    display: inline-flex; margin-top: 14px;
+    color: var(--text-dim); transition: color 0.2s;
+  }
+  .team-linkedin:hover { color: var(--cyan); }
 
   /* CTA SECTION */
   .cta-section {
