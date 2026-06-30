@@ -477,12 +477,12 @@
   }
   .hero-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); }
   h1.hero-title {
-    font-size: clamp(36px, 5vw, 62px);
+    font-size: clamp(30px, 4vw, 52px);
     font-weight: 800; line-height: 1.1;
     margin-bottom: 24px;
     letter-spacing: -1px;
   }
-  h1.hero-title .accent { color: var(--cyan); }
+  h1.hero-title .accent { color: var(--cyan); display: block; margin-top: 16px; }
   .hero-sub {
     font-size: 18px; color: var(--text-muted);
     line-height: 1.7; margin-bottom: 40px; max-width: 520px;
@@ -642,11 +642,7 @@
   }
 
   /* CASE STUDIES */
-  .cases {
-    background: var(--navy-mid);
-    border-top: 1px solid rgba(73,200,245,0.2);
-    border-bottom: 1px solid rgba(73,200,245,0.2);
-  }
+  .cases {}
   .cases-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 24px; margin-top: 56px;
