@@ -507,9 +507,12 @@
   .btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-1px); }
 
   .hero-stats {
-    display: flex; gap: 40px; margin-top: 56px;
+    display: flex; justify-content: space-between; margin-top: 56px;
     padding-top: 40px; border-top: 1px solid rgba(227,127,47,0.3);
-    flex-wrap: wrap;
+    flex-wrap: wrap; gap: 24px;
+  }
+  .hero-stats > div {
+    flex: 1; min-width: 120px; text-align: center;
   }
   .hero-stat-num {
     font-size: 32px; font-weight: 800; color: var(--white);
