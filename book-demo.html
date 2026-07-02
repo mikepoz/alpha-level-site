@@ -3,101 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms & Conditions | Alpha Level</title>
+  <title>Book a Demo | Alpha Level</title>
   <link rel="stylesheet" href="style.css">
+
   <style>
-    .privacy-hero {
-      padding: 120px 24px 60px;
+    .demo-hero {
+      padding: 140px 24px 0;
       text-align: center;
-      border-bottom: 1px solid var(--navy-border);
     }
-    .privacy-hero h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 300;
+    .demo-hero h1 {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      line-height: 1.15;
+      max-width: 720px;
+      margin: 16px auto 20px;
       color: var(--white);
-      margin-bottom: 12px;
     }
-    .privacy-hero .updated {
+    .demo-hero p {
       color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-    .privacy-content {
-      max-width: 800px;
+      font-size: 17px;
+      line-height: 1.7;
+      max-width: 560px;
       margin: 0 auto;
-      padding: 60px 24px 100px;
     }
-    .privacy-content h2 {
-      font-size: 1.25rem;
-      font-weight: 400;
-      color: var(--cyan);
-      margin: 48px 0 16px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--navy-border);
+    .demo-wrap {
+      max-width: 1040px;
+      margin: 64px auto 120px;
+      padding: 0 24px;
+      display: flex;
+      gap: 56px;
+      align-items: flex-start;
     }
-    .privacy-content p {
-      color: var(--text-muted);
-      line-height: 1.8;
-      margin-bottom: 16px;
-      font-size: 0.95rem;
+    .demo-info { flex: 1 1 340px; padding-top: 8px; }
+    .demo-info h2 {
+      font-size: 20px; font-weight: 700; color: var(--white);
+      margin-bottom: 22px;
     }
-    .privacy-content ul {
-      color: var(--text-muted);
-      line-height: 1.8;
-      margin: 0 0 16px 0;
-      padding-left: 24px;
-      font-size: 0.95rem;
+    .demo-points { list-style: none; display: flex; flex-direction: column; gap: 18px; margin-bottom: 40px; }
+    .demo-points li {
+      display: flex; gap: 12px; align-items: flex-start;
+      color: var(--text-muted); font-size: 15px; line-height: 1.6;
     }
-    .privacy-content ul li {
-      margin-bottom: 8px;
+    .demo-points .check {
+      flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+      background: rgba(73,200,245,0.12); border: 1px solid rgba(73,200,245,0.3);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--cyan); font-size: 12px; margin-top: 1px;
     }
-    .privacy-content a {
-      color: var(--cyan);
-      text-decoration: none;
+    .demo-quote {
+      background: var(--navy-card); border: 1px solid var(--navy-border);
+      border-radius: 12px; padding: 24px 26px;
     }
-    .privacy-content a:hover {
-      text-decoration: underline;
+    .demo-quote p {
+      font-size: 14px; color: var(--text-muted); line-height: 1.65; margin-bottom: 12px; font-style: italic;
     }
-    .toc {
-      background: var(--navy-card);
-      border: 1px solid var(--navy-border);
-      border-radius: 12px;
-      padding: 28px 32px;
-      margin-bottom: 48px;
+    .demo-quote-author { font-size: 12px; color: var(--text-dim); }
+    .demo-form-card {
+      flex: 1 1 420px;
+      background: var(--navy-card); border: 1px solid var(--navy-border);
+      border-radius: 14px; padding: 36px 32px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
     }
-    .toc h3 {
-      color: var(--white);
-      font-size: 0.85rem;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin: 0 0 16px;
+    .form-row { margin-bottom: 18px; }
+    .form-row label {
+      display: block; font-size: 13px; font-weight: 600;
+      color: var(--text-muted); margin-bottom: 6px;
     }
-    .toc ol {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      line-height: 2;
-      padding-left: 20px;
-      margin: 0;
+    .form-row input, .form-row textarea {
+      width: 100%; background: var(--navy-mid); border: 1px solid var(--navy-border);
+      border-radius: 7px; padding: 11px 14px; color: var(--white);
+      font-size: 14px; font-family: inherit;
     }
-    .toc ol li a {
-      color: var(--text-muted);
-      text-decoration: none;
+    .form-row input:focus, .form-row textarea:focus {
+      outline: none; border-color: var(--cyan);
     }
-    .toc ol li a:hover {
-      color: var(--cyan);
+    .form-row textarea { resize: vertical; min-height: 90px; }
+    .form-submit { width: 100%; margin-top: 8px; border: none; cursor: pointer; }
+    .form-submit[disabled] { opacity: 0.6; cursor: default; }
+    .form-hp { position: absolute; left: -9999px; }
+    .form-error {
+      font-size: 13px; color: #ff8a80; margin-top: 14px; text-align: center; line-height: 1.6;
     }
-    .contact-card {
-      background: var(--navy-card);
-      border: 1px solid var(--navy-border);
-      border-radius: 12px;
-      padding: 28px 32px;
-      margin-top: 48px;
+    .form-error a { color: #ff8a80; text-decoration: underline; }
+    .form-note { font-size: 12px; color: var(--text-dim); margin-top: 16px; text-align: center; }
+    .form-note a { color: var(--cyan); text-decoration: none; }
+    .demo-success { text-align: center; padding: 24px 8px; }
+    .demo-success-icon {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: rgba(73,200,245,0.12); border: 1px solid rgba(73,200,245,0.3);
+      color: var(--cyan); font-size: 22px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 18px;
     }
-    .contact-card p {
-      margin: 0;
-    }
-    .contact-card a {
-      color: var(--cyan);
+    .demo-success h3 { font-size: 19px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+    .demo-success p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    @media (max-width: 760px) {
+      .demo-wrap { flex-direction: column; }
+      .demo-hero { padding-top: 110px; }
     }
   </style>
 </head>
@@ -116,84 +118,60 @@
   </div>
 </nav>
 
-<div class="privacy-hero">
-  <h1>Terms &amp; Conditions</h1>
-  <p class="updated">Last Updated: August 12, 2024</p>
+<div class="demo-hero">
+  <div class="section-label">Book a Demo</div>
+  <h1>See Alpha Level in action</h1>
+  <p>
+    Get a live walkthrough of the platform &mdash; how it cuts alert noise, surfaces the
+    attacks rule-based tools miss, and fits into your existing stack. No rip-and-replace,
+    no pressure.
+  </p>
 </div>
 
-<div class="privacy-content">
-
-  <p>Thank you for visiting <a href="index.html">www.alphalevel.ai</a>. These Terms of Use ("Terms") create a legal agreement between you ("You" or "Your") and Alpha Level, Inc. ("Alpha Level," "we," "us," or "our") that governs your access to and use of the website available at www.alphalevel.ai or successor site and the information and materials available on this website (collectively, the "Alpha Level Site"). By accessing any portion of the Alpha Level Site, you agree to be bound by these Terms, which may be amended from time to time in our sole discretion. If we make changes to these Terms, we will provide notice of such changes, such as by posting a notice on the Alpha Level Site and/or updating the "Last Updated" date above. Your continued use of the Alpha Level Site following the posting of changes or modifications will confirm your acceptance of such changes or modifications. If you do not agree to these Terms (as amended), you must stop using the Alpha Level Site.</p>
-
-  <div class="toc">
-    <h3>Table of Contents</h3>
-    <ol>
-      <li><a href="#overview">Overview of Alpha Level</a></li>
-      <li><a href="#eligibility">Eligibility</a></li>
-      <li><a href="#conduct">User Conduct</a></li>
-      <li><a href="#ip">Intellectual Property Ownership and Limited License</a></li>
-      <li><a href="#thirdparty">Third-Party Links</a></li>
-      <li><a href="#privacy">Privacy</a></li>
-      <li><a href="#location">Location</a></li>
-      <li><a href="#indemnification">Indemnification</a></li>
-      <li><a href="#liability">Limitation of Liability</a></li>
-      <li><a href="#warranties">Disclaimer of Warranties</a></li>
-      <li><a href="#governing">Governing Law and Venue</a></li>
-      <li><a href="#misc">Miscellaneous</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ol>
+<div class="demo-wrap">
+  <div class="demo-info">
+    <h2>What to expect</h2>
+    <ul class="demo-points">
+      <li><span class="check">&#10003;</span> A 20-minute walkthrough of the Alpha Level platform</li>
+      <li><span class="check">&#10003;</span> A straight answer on fit, timeline, and what deployment actually looks like</li>
+      <li><span class="check">&#10003;</span> No pressure, no slideware &mdash; just a straightforward look at the platform</li>
+    </ul>
+    <div class="demo-quote">
+      <p>&ldquo;We view Alpha Level as a critical capability that enables us to scale our incident response to meet increasing attack volume.&rdquo;</p>
+      <div class="demo-quote-author">Senior Director of Cybersecurity Operations, Fortune 100 Life Sciences Company</div>
+    </div>
   </div>
 
-  <h2 id="overview">1. Overview of Alpha Level</h2>
-  <p>Alpha Level offers a holistic, vendor-agnostic alert management platform built for security operations teams. It continuously consumes and classifies incoming alerts, automatically filtering out noise using precision AI techniques.</p>
-
-  <h2 id="eligibility">2. Eligibility</h2>
-  <p>To use the Alpha Level Site, you must be at least 18 years old and legally capable of entering into binding contracts. By accessing or using the Alpha Level Site, you represent and warrant that you meet these eligibility requirements.</p>
-
-  <h2 id="conduct">3. User Conduct</h2>
-  <p>You agree to use the Alpha Level Site only for lawful purposes. You may not:</p>
-  <ul>
-    <li>Disrupt or interfere with the functioning of the Alpha Level Site</li>
-    <li>Upload or transmit malicious code</li>
-    <li>Access or use the Alpha Level Site in violation of any applicable laws</li>
-  </ul>
-  <p>We reserve the right to terminate or suspend your access to the Alpha Level Site for any violation of these Terms.</p>
-
-  <h2 id="ip">4. Intellectual Property Ownership and Limited License</h2>
-  <p>The Alpha Level Site, including the text, images, photographs, videos, information, data, software, and other content and materials contained therein (and the selection, arrangement and presentation thereof), are owned by Alpha Level or our licensors and are protected under both U.S. and international laws. Except as explicitly stated in these Terms, all rights in and to the Alpha Level Site are reserved by us or our licensors.</p>
-  <p>Subject to your compliance with these Terms, you are granted a limited, nonexclusive, nontransferable, non-sublicensable, revocable license only to access and use the Alpha Level Site for non-commercial, informational purposes. Alpha Level does not grant you any rights in its marks or any other product or service name or slogan contained on the Alpha Level Site. Any other access, use, copying, distribution, retransmission or modification of the Alpha Level Site, without our prior written permission, is strictly prohibited and will terminate the license granted herein and violate our intellectual property rights.</p>
-
-  <h2 id="thirdparty">5. Third-Party Links</h2>
-  <p>The Alpha Level Site may contain links to third-party websites, advertisers, products, services, or other activities or events that are not owned or controlled by Alpha Level (collectively, "Third-Party Content"). Your dealings or correspondence with Third-Party Content and your use of or interaction with any Third-Party Content are solely between you and the third party. We do not control, endorse or adopt any Third-Party Content and make no representation or warranties of any kind regarding Third-Party Content or the privacy practices of any third parties, and your access to and use of such Third-Party Content and interaction with such third parties is at your own risk.</p>
-
-  <h2 id="privacy">6. Privacy</h2>
-  <p>We reserve the right, and you authorize us, to the use and assignment of all information submitted or collected by or about you on or through the Alpha Level Site in accordance with our <a href="privacy-policy.html">Privacy Policy</a>.</p>
-
-  <h2 id="location">7. Location</h2>
-  <p>The Alpha Level Site is controlled and/or operated from the United States, and is not intended to subject us to non-U.S. jurisdiction or laws, except as otherwise expressly stated in these Terms. The Alpha Level Site may not be appropriate or available for use in some jurisdictions outside of the United States. If you use the Alpha Level Site, you do so at your own risk, and you are responsible for complying with all local laws, rules and regulations. We may limit the Alpha Level Site's availability, in whole or in part, to any person, geographic area or jurisdiction we choose, at any time and in our sole discretion.</p>
-
-  <h2 id="indemnification">8. Indemnification</h2>
-  <p>To the extent permitted by law, you agree to indemnify, defend and hold us and our partners, members, associates, agents, attorneys, employees, subcontractors, successors, assigns and affiliates (collectively, "Alpha Level Parties") harmless from any liability, loss, claim and expense related to your (a) violation of these Terms, (b) violation of applicable law or third party rights (including, without limitation, patent, trademark, copyright, trade secret or other intellectual property rights), (c) willful misconduct and (d) use of the Alpha Level Site.</p>
-  <p>You agree to promptly notify Alpha Level and the Alpha Level Parties of any third-party claims, cooperate with us and the Alpha Level Parties in defending such claims, and pay all fees, costs and expenses associated with defending such claims (including, but not limited to, reasonable attorneys' fees). You also agree that Alpha Level will have control of the defense or settlement, at our sole option, of any third-party claims.</p>
-
-  <h2 id="liability">9. Limitation of Liability</h2>
-  <p>To the fullest extent permitted by applicable law, Alpha Level and the Alpha Level Parties will not be liable to you under any theory of liability — whether based in contract, tort, negligence, warranty or otherwise — for any special, indirect, incidental or consequential damages, or lost profits, even if we or any Alpha Level Parties have been advised of the possibility of such damages. In no event shall our aggregate liability or the aggregate liability of any Alpha Level Parties, whether in contract, warranty, tort or other theory, arising out of or relating to these Terms and/or the Alpha Level Site exceed fifty dollars ($50.00).</p>
-
-  <h2 id="warranties">10. Disclaimer of Warranties</h2>
-  <p>Except as expressly provided in writing by us, the Alpha Level Site is provided "as is" and "as available" without warranties of any kind, either express or implied. We disclaim all other warranties, express or implied, including, without limitation, implied warranties of merchantability, fitness for a particular purpose, title and non-infringement. We do not represent or warrant that the Alpha Level Site is accurate, complete, reliable, current or error-free. You assume the entire risk as to the quality and performance of the Alpha Level Site.</p>
-  <p>We may make changes to the features, functionality or content of the Alpha Level Site at any time. We reserve the right in our sole discretion to edit or delete any content appearing on the Alpha Level Site.</p>
-
-  <h2 id="governing">11. Governing Law and Venue</h2>
-  <p>Any dispute arising from these Terms and your use of the Alpha Level Site will be governed by and construed and enforced in accordance with the laws of the state of Delaware without regard to conflict of law rules or principles that would cause the application of the laws of any other jurisdiction. You agree that any action at law or in equity arising out of or relating to these Terms will be filed only in the state and federal courts located in Washington, and you hereby irrevocably and unconditionally consent and submit to the exclusive jurisdiction of such courts over any suit, action or proceeding arising out of these Terms.</p>
-
-  <h2 id="misc">12. Miscellaneous</h2>
-  <p>Our failure to exercise or enforce any right or provision of these Terms will not operate as a waiver of such right or provision. The section titles in these Terms are for convenience only and have no legal or contractual effect. Except as otherwise provided herein, these Terms are intended solely for the benefit of the parties and are not intended to confer third-party beneficiary rights on any other person or entity. If any provision of these Terms is unlawful, void or unenforceable, that provision shall be deemed severable from these Terms and does not affect the validity and enforceability of any remaining provisions. You agree that communications and transactions between you and Alpha Level may be conducted electronically.</p>
-
-  <h2 id="contact">13. Contact</h2>
-  <div class="contact-card">
-    <p>If you have any questions or comments regarding the Alpha Level Site or these Terms, please contact us at <a href="mailto:hello@alphalevelsec.com">hello@alphalevelsec.com</a>.</p>
+  <div class="demo-form-card">
+    <form id="demoForm" class="demo-form" name="demo-request" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="demo-request">
+      <p class="form-hp"><label>Leave this field empty: <input name="bot-field"></label></p>
+      <div class="form-row">
+        <label for="fullName">Full name</label>
+        <input type="text" id="fullName" name="fullName" required autocomplete="name">
+      </div>
+      <div class="form-row">
+        <label for="workEmail">Work email</label>
+        <input type="email" id="workEmail" name="workEmail" required autocomplete="email">
+      </div>
+      <div class="form-row">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" required autocomplete="organization">
+      </div>
+      <div class="form-row">
+        <label for="message">What are you hoping to solve?</label>
+        <textarea id="message" name="message" placeholder="Alert fatigue, blind spots, tool consolidation, etc."></textarea>
+      </div>
+      <button type="submit" class="btn-primary form-submit">Request Demo</button>
+      <div id="formError" class="form-error" hidden>Something went wrong &mdash; please email us directly at <a href="mailto:hello@alphalevelsec.com">hello@alphalevelsec.com</a> instead.</div>
+      <div class="form-note">Or email us directly at <a href="mailto:hello@alphalevelsec.com">hello@alphalevelsec.com</a></div>
+    </form>
+    <div id="demoSuccess" class="demo-success" hidden>
+      <div class="demo-success-icon">&#10003;</div>
+      <h3>Thanks &mdash; request received</h3>
+      <p>Someone from our team will reach out within one business day to find a time that works.</p>
+    </div>
   </div>
-
 </div>
 
 <footer>
@@ -211,6 +189,41 @@
   </div>
   <div class="footer-copy">© 2025 Alpha Level. All rights reserved.</div>
 </footer>
+
+<script>
+  // Submits to Netlify Forms (data-netlify="true" above). Netlify detects this form
+  // at deploy time; add an email notification to hello@alphalevelsec.com in
+  // Site settings -> Forms -> Form notifications in the Netlify dashboard.
+  function encodeFormData(form) {
+    return new URLSearchParams(new FormData(form)).toString();
+  }
+
+  var demoForm = document.getElementById('demoForm');
+  demoForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var submitBtn = demoForm.querySelector('.form-submit');
+    var errorEl = document.getElementById('formError');
+    errorEl.hidden = true;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encodeFormData(demoForm)
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error('Form submission failed');
+        demoForm.hidden = true;
+        document.getElementById('demoSuccess').hidden = false;
+      })
+      .catch(function () {
+        errorEl.hidden = false;
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Request Demo';
+      });
+  });
+</script>
 
 </body>
 </html>
